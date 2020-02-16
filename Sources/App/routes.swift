@@ -16,7 +16,7 @@ public func routes(_ router: Router) throws {
                 headers: headers
             )
             
-            let client = HTTPClient.connect(hostname: "localhost", port: 8090, on: req)
+            let client = HTTPClient.connect(hostname: "40.68.168.196", port: 80, on: req)
             
             return client.flatMap(to: BuyResponse.self) { client in
                 return client.send(checkAvailableRequest).flatMap(to: BuyResponse.self) { response in
