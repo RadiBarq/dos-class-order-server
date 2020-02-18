@@ -7,25 +7,25 @@
 
 import Vapor
 
-/// Book
+/// Book.
 final class Book {
     
-    /// id
+    /// book Id.
     var id: Int?
     
-    /// Title
+    /// Book title.
     var title: String
     
-    /// Category
+    /// Book category.
     var category: String
     
-    /// Price
+    /// Book price.
     var price: Int
     
-    /// Number of items
+    /// Book number of items.
     var numberOfItems: Int
     
-    /// Creates a new 'Book'
+    /// Creates a new 'Book'.
     init(id: Int? = nil, title: String, category: String, price: Int, numberOfItems: Int) {
         self.id = id
         self.title = title

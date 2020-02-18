@@ -6,13 +6,14 @@
 //
 
 import Vapor
-/// BookAvailableResponse
+
+/// Book Available Response.
 final class BookAvailableResponse {
     
-    /// Available
+    /// To indicate if the book available or not.
     var available: Bool
     
-    /// Book
+    /// The book that is availabe or not.
     var book: Book
     
     /// Create a new `BookAvailableResponse`.
