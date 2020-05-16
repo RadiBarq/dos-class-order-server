@@ -19,7 +19,7 @@ public func routes(_ router: Router) throws {
                 url: URL(string: "/books/available/\(buyRequest.bookId)")!,
                 headers: headers
             )
-            let client = HTTPClient.connect(hostname: "40.68.168.196", port: 80, on: req)
+            let client = HTTPClient.connect(hostname: "localhost", port: 8100, on: req)
             return client.flatMap(to: BuyBookResponse.self) { client in
                 return client.send(checkAvailableRequest).flatMap(to: BuyBookResponse.self) { response in
                     let decoder = JSONDecoder()
